@@ -3,7 +3,7 @@ let serverForm = document.getElementById('serverForm');
 
 let serverTbody = document.querySelector('#serverTable tbody');
 
-let allServers = {};
+let allServers = {}; //allServers is an object, where each server is server+serverId: server object key-value pair.
 let serverId = 0;
 
 serverForm.addEventListener('submit', submitServerInfo);
@@ -16,7 +16,7 @@ function submitServerInfo(evt) {
 
   if (serverName !== '') {
     serverId++;
-    allServers['server' + serverId] = { serverName };
+    allServers['server' + serverId] = { serverName }; //object with one key-value pair that is serverName: value_of_serverName
 
     updateServerTable();
 

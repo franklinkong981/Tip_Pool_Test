@@ -22,7 +22,7 @@ function submitPaymentInfo(evt) {
     allPayments['payment' + paymentId] = curPayment;
 
     appendPaymentTable(curPayment);
-    updateServerTable();
+    updateServerTable(); //to recalculate tips for each server.
     updateSummary();
 
     billAmtInput.value = '';
